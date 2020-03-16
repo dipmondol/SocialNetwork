@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Signup">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfileImageId"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/userProfileNameChangeId"
+        android:src="@drawable/profile"
+        app:civ_border_color="@color/colorPrimaryDark"
+        app:civ_border_width="2dp" />
+    <EditText
+        android:id="@+id/fullName_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Full Name"
+        android:layout_below="@+id/userProfileImageId"
+        android:textColor="#131212"
+        android:textSize="18sp"
+
+
+        />
+
+    <EditText
+        android:id="@+id/userName_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fullName_Id"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="User Name"
+        android:textColor="#131212"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/email_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName_Id"
+        android:layout_margin="5dp"
+        android:hint="E-mail"
+
+        android:textColor="#131212"
+        android:textSize="18sp" />
+    <EditText
+        android:id="@+id/dobIb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_Id"
+        android:layout_margin="5dp"
+        android:textColor="#000000"
+        android:hint="DD/MM/YYYY"
+        android:textSize="18sp"
+        android:inputType="textEmailAddress"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+
+        />
+
+
+    <RadioGroup
+        android:id="@+id/genderRadioGroupId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dobIb"
+        android:padding="20dp"
+        android:layout_margin="5dp"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmpass_Id"
+            android:text="Gender"
+
+            />
+
+        <RadioButton
+            android:id="@+id/maleId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+
+
+            />
+
+        <RadioButton
+            android:id="@+id/femaleId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+
+
+            />
+
+
+    </RadioGroup>
+    <EditText
+        android:id="@+id/password_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderRadioGroupId"
+        android:layout_margin="5dp"
+        android:hint="Password"
+        android:textColor="#131212"
+        android:inputType="textPassword"
+        android:textSize="18sp"
+
+        />
+
+    <EditText
+        android:id="@+id/confirmpass_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_Id"
+        android:layout_margin="5dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:textColor="#131212"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/registerId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmpass_Id"
+        android:layout_margin="20dp"
+        android:background="@drawable/radius"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+
+
+        />
+
+    <TextView
+        android:id="@+id/backtoLoginId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerId"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="10dp"
+        android:text="Already a member? Login"
+        android:textColor="#D12A2A"
+
+
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBarsignupId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/backtoLoginId"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+
+        />
+</RelativeLayout>
+

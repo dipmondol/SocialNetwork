@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/header_bg"
+    tools:context=".Login">
+
+
+    <EditText
+        android:id="@+id/userLoginEmailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:hint="E-mail"
+        android:textColor="#131212"
+        android:textSize="18sp"
+
+        />
+
+    <EditText
+        android:id="@+id/userLoginPassId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userLoginEmailId"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#131212"
+        android:textSize="18sp"
+
+        />
+
+    <Button
+        android:id="@+id/loginId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userLoginPassId"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/radius"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+
+        />
+
+    <Button
+        android:id="@+id/signupId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginId"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/radius"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+
+        />
+
+    <TextView
+        android:id="@+id/forgottenPassId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signupId"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="10dp"
+        android:text="Forgotten password?"
+        android:textColor="#D12A2A"
+
+
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regId"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+
+        />
+
+
+</RelativeLayout>

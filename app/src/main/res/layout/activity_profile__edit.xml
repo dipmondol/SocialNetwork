@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Profile_Edit">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfileImageChangeId"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/userProfileNameChangeId"
+        android:src="@drawable/profile"
+        app:civ_border_color="@color/colorPrimaryDark"
+        android:layout_marginBottom="20dp"
+        app:civ_border_width="2dp" />
+
+    <EditText
+        android:id="@+id/userProfileNameChangeId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="Username"
+        android:textColor="#131212"
+        android:textSize="18sp"
+
+        />
+    <EditText
+        android:id="@+id/userProfilePhoneNumberId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="Phone Number"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/userProfileNameChangeId"
+        android:textColor="#131212"
+        android:textSize="18sp"
+        android:inputType="number"
+
+        />
+    <EditText
+        android:id="@+id/userProfileCountryId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="Country "
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/userProfilePhoneNumberId"
+        android:textColor="#131212"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/userProfileUpdateBtnId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userProfileCountryId"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/radius"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+
+
+        />
+
+
+
+
+</RelativeLayout>

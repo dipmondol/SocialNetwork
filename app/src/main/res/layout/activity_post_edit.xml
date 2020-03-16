@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PostEdit">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/posteditToolbarId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+        <ImageView
+            android:id="@+id/posteditBackBtnId"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_white"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="Edit Post"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add a Topic"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="9dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/toolBarColor" />-->
+        <EditText
+            android:id="@+id/postTextId"
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/post_bg_curve"
+            android:ellipsize="start"
+            android:padding="10dp"
+            android:hint="Write here...."
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:textSize="16sp" />
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:weightSum="2">
+             <TextView
+                 android:id="@+id/imagePickId"
+                 android:drawableRight="@drawable/add_photo"
+                 android:drawableTint="#A09EA1"
+                 android:layout_width="12dp"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="8dp"
+                 android:padding="8dp"
+                 android:layout_weight="1"
+                 android:textAlignment="center"
+                 android:textSize="16sp"
+                 android:text="Add Image"
+                 android:background="@drawable/post_bg_curve"
+                 android:textColor="#4D4949" />
+             <TextView
+                 android:id="@+id/videoPickId"
+                 android:drawableRight="@drawable/video_icon"
+                 android:drawableTint="#A09EA1"
+                 android:layout_width="12dp"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="8dp"
+                 android:padding="8dp"
+                 android:layout_weight="1"
+                 android:textAlignment="center"
+                 android:textSize="16sp"
+                 android:text="Add Video"
+                 android:background="@drawable/post_bg_curve"
+                 android:textColor="#4D4949" />
+
+
+
+
+
+         </LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/postEditImageViewId"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:drawableTint="#A09EA1"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:src="@drawable/add_photo"
+                android:background="@drawable/post_bg_curve"
+                android:textColor="#4D4949"
+
+                />
+            <VideoView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:drawableRight="@drawable/video_icon"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:text="Add Video"
+                android:background="@drawable/post_bg_curve"
+
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/postEditBtnId"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/btn_background"
+            android:theme="@style/submit_button_style"
+            android:text="Post"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/postDeleteBtnId"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/btn_background"
+            android:theme="@style/submit_button_style"
+            android:text="Delete"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
