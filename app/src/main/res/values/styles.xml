@@ -14,4 +14,14 @@
         <item name="colorControlHighlight">#FFEB3B</item>
     </style>
 
+    <style name="BottomNavTheme"
+        parent="Theme.AppCompat.Light"
+        >
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="android:textColorSecondary">#00BCD4</item>
+
+
+
+    </style>
+
 </resources>

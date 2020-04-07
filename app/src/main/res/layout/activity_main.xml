@@ -36,7 +36,25 @@
 
 
 
+
+
+
+
        </FrameLayout>
+       <com.google.android.material.bottomnavigation.BottomNavigationView
+           android:id="@+id/bottomNavId"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:background="?android:attr/windowBackground"
+           app:itemBackground="@color/colorAccent"
+           app:itemIconTint="@color/nav_tab_item_foreground"
+           app:itemTextColor="@color/nav_tab_item_foreground"
+           app:menu="@menu/bottom_nav"
+           />
+
+
+
        <ImageView
            android:id="@+id/postCreateBtnId"
            android:layout_width="30dp"
@@ -52,6 +70,7 @@
 
 
            />
+
    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView

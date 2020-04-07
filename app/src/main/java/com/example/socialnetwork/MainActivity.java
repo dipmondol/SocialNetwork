@@ -7,6 +7,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,8 +25,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.socialnetwork.Fragments.HomeFragment;
+import com.example.socialnetwork.Fragments.ProfileFragment;
+import com.example.socialnetwork.Fragments.UsersFragment;
 import com.example.socialnetwork.Model.Posts;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -51,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     private CircleImageView navProfileImage;
     private TextView navUserName, navUserEmail;
+
 
     String PostKey, currentUserId, databaseUserId;
 
@@ -97,6 +103,16 @@ public class MainActivity extends AppCompatActivity {
         navUserName = navView.findViewById(R.id.userNameId);
         navUserEmail = navView.findViewById(R.id.userEmailId);
         postCreate = findViewById(R.id.postCreateBtnId);
+
+        BottomNavigationView  bottomNavigationView = findViewById(R.id.bottomNavId);
+        bottomNavigationView.setOnNavigationItemSelectedListener(selectedListener);
+
+        //default fragment transaction
+        mtoolBar.setTitle("Home");
+        HomeFragment fragment1 = new HomeFragment();
+        FragmentTransaction ft1 = getSupportFragmentManager().beginTransaction();
+        ft1.replace(R.id.mainContainerId,fragment1,"");
+        ft1.commit();
 
 
         postCreate.setOnClickListener(new View.OnClickListener() {
@@ -158,7 +174,46 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
     }
+    //bottom nevigation
+    private BottomNavigationView.OnNavigationItemSelectedListener selectedListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                    switch (menuItem.getItemId()){
+                        case R.id.bottom_nav_home_id:
+                            mtoolBar.setTitle("Home");
+                            HomeFragment fragment1 = new HomeFragment();
+                            FragmentTransaction ft1 = getSupportFragmentManager().beginTransaction();
+                            ft1.replace(R.id.mainContainerId,fragment1,"");
+                            ft1.commit();
+                            return true;
+
+                        case R.id.bottom_nav_profile_id:
+
+                            mtoolBar.setTitle("Profile");
+                            ProfileFragment fragment2 = new ProfileFragment();
+                            FragmentTransaction ft2 = getSupportFragmentManager().beginTransaction();
+                            ft2.replace(R.id.mainContainerId,fragment2,"");
+                            ft2.commit();
+
+                            return true;
+
+                        case R.id.bottom_nav_users_id:
+                            mtoolBar.setTitle("Home");
+                            UsersFragment fragment3 = new UsersFragment();
+                            FragmentTransaction ft3 = getSupportFragmentManager().beginTransaction();
+                            ft3.replace(R.id.mainContainerId,fragment3,"");
+                            ft3.commit();
+                            return true;
+
+
+                    }
+                    return false;
+                }
+            };
 
     @Override
     public void onBackPressed() {
