@@ -120,6 +120,7 @@
                 android:src="@drawable/add_photo"
                 android:background="@drawable/post_bg_curve"
                 android:textColor="#4D4949"
+                android:scaleType="fitXY"
 
                 />
             <VideoView
